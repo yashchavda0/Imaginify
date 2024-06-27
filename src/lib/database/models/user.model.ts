@@ -39,7 +39,7 @@ const UserSchema = new Schema({
     
     unique: true,
   },
-  username: {
+  userName: {
     type: String,
     
     

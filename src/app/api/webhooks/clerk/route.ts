@@ -66,11 +66,11 @@ export async function POST(req: Request) {
       evt.data;
 
     const user = {
-      clerkId: id,
+      clerkId: id,  
       email: email_addresses[0].email_address,
       userName: username!,
-      firstName: first_name,
-      lastName: last_name,
+      firstName: first_name || '',
+      lastName: last_name || '',
       photo: image_url,
     };
 
@@ -84,7 +84,8 @@ export async function POST(req: Request) {
         },
       });
     }
-
+    console.log("New user createfefs+++++++++++++++++++++++++++++++++++++++++++++++");
+    
     return NextResponse.json({ message: "OK", user: newUser });
   }
 
